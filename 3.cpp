@@ -114,7 +114,7 @@ public:
     {
 
     }
-    void print_Pants() const {                //이거 추천 합니다...... //네!!!!!!!!!!!!
+    void print_Pants() const {               
         cout << "-------------------------------------------------------------" << endl << endl;
         cout << "품 번 : " << number << endl;
         cout << "이 름 : " << name << endl;
@@ -202,56 +202,50 @@ vector <Basket> vb;
 
 
 void Make_Vector()
-{
+{   //외투
     Outer o1(1, "오버핏 피코트", 240000, "COOR", "피코트", "NONE", "87.5", "M");
     Outer o2(2, "후드 더블 코트", 70000, "CAPITAL RADIO TUNES", "더블 코트", "NONE", "109", "L");
     Outer o3(3, "눕시 온볼 자켓", 230000, "THE NORTH FACE", "숏패딩", "폴리에스터 100%", "70", "XL");
     Outer o4(4, "워싱 스티치 데님자켓", 50000, "TRILLION", "트러커 재킷", "NONE", "74.5", "XXL");
     Outer o5(5, "빈티지 무스탕 점퍼", 180000, "PANICALE", "무스탕", "NONE", "69", "XL");
-    ///////////외투//////////
     vo.push_back(o1);
     vo.push_back(o2);
     vo.push_back(o3);
     vo.push_back(o4);
     vo.push_back(o5);
-
+    //상의
     Top t1(6, "플라워 메르디", 70000, "메르디 메르크디", "맨투맨", "63", "Free");
     Top t2(7, "헤리티지 댄 케이블 니트", 60000, "예일", "니트", "52", "S");
     Top t3(8, "피그먼트 컷 후드", 70000, "소버먼트", "후드티셔츠", "69", "M");
     Top t4(9, "로고 티셔츠", 50000, "디스이즈네버댓", "티셔츠", "72", "L");
-    Top t5(10, "옥스포드 셔츠", 70000, "폴로 랄프 로렌", "카라 티셔츠", "84", "XL");
-    ///////////상의//////////
+    Top t5(10, "옥스포드 셔츠", 70000, "폴로 랄프 로렌", "카라 티셔츠", "84", "XL");    
     vt.push_back(t1);
     vt.push_back(t2);
     vt.push_back(t3);
     vt.push_back(t4);
     vt.push_back(t5);
-
+    //하의
     Pants p1(11, "원턱 트레이닝 팬츠", 30000, "브렌손", "와이드 트레이닝 팬츠", "L", "106");
-    Pants p2(12, "레인 슬럽 데님 쇼츠", 20000, "무신사", "데님 쇼츠", "XL", "56"); //트릴론
+    Pants p2(12, "레인 슬럽 데님 쇼츠", 20000, "무신사", "데님 쇼츠", "XL", "56"); 
     Pants p3(13, "리얼 와이드 벨티드 슬랙스 ", 10000, "무신사", "와이드 팬츠", "M", "103");
     Pants p4(14, "스웻 조거 팬츠", 50000, "커버낫", "조거 팬츠", "M", "102");
-    Pants p5(15, "레깅스 팬츠", 100000, "볼란테", "레깅스 팬츠", "S", "95");
-    ///////////하의//////////
+    Pants p5(15, "레깅스 팬츠", 100000, "볼란테", "레깅스 팬츠", "S", "95");    
     vp.push_back(p1);
     vp.push_back(p2);
     vp.push_back(p3);
     vp.push_back(p4);
     vp.push_back(p5);
-
+    //신발
     Shoes s1(16, "아디다스 슈퍼스타 82 Black White", 104000, "아디다스", "운동화", 290, 3);
     Shoes s2(17, "아디다스 아디매틱 Olive Strata Wonder Beige", 100000, "아디다스", "운동화", 290, 3);
     Shoes s3(18, "다우너 로퍼 R21M041 (BX 블랙)", 137000, "로맨틱무브", "구두", 270, 4);
     Shoes s4(19, "퍼 카라 스웨이드 슬리퍼 (코케트) W - 체스넛 / 5125CHE", 178000, "어그", "슬리퍼", 240, 1);
-    Shoes s5(20, "조던 1 Retro High OG University Blue", 330000, "나이키", "조던하이", 270, 1);
-    ///////////신발//////////
+    Shoes s5(20, "조던 1 Retro High OG University Blue", 330000, "나이키", "조던하이", 270, 1);    
     vs.push_back(s1);
     vs.push_back(s2);
     vs.push_back(s3);
     vs.push_back(s4);
     vs.push_back(s5);
-
-
 }
 int total = 0;
 
@@ -290,8 +284,6 @@ void Buy()
                     total += vo.at(i).price;
                     b1.number = vo.at(i).number;
                     vb.push_back(b1);
-
-                    //cout << vb.at(0).name << endl << endl;
                 }
 
             }
@@ -300,8 +292,8 @@ void Buy()
                     vt.at(i).print_Top();
 
                     Basket b2;
-                    b2.name = vt.at(i).name;   // 장바구니에 이름 넣기  //vt로 수정해야함 아마?
-                    b2.price = vt.at(i).price;   // 장바구니에 가격 넣기
+                    b2.name = vt.at(i).name;     
+                    b2.price = vt.at(i).price;   
                     total += vt.at(i).price;
 
                     b2.number = vt.at(i).number;
@@ -315,8 +307,8 @@ void Buy()
                     vp.at(i).print_Pants();
 
                     Basket b3;
-                    b3.name = vp.at(i).name;   // 장바구니에 이름 넣기 //vp
-                    b3.price = vp.at(i).price;   // 장바구니에 가격 넣기
+                    b3.name = vp.at(i).name;   
+                    b3.price = vp.at(i).price;   
                     total += vp.at(i).price;
 
                     b3.number = vp.at(i).number;
@@ -331,8 +323,8 @@ void Buy()
                     vs.at(i).print_Shoes();
 
                     Basket b4;
-                    b4.name = vs.at(i).name;   // 장바구니에 이름 넣기  //vs
-                    b4.price = vs.at(i).price;   // 장바구니에 가격 넣기
+                    b4.name = vs.at(i).name;   
+                    b4.price = vs.at(i).price;   
                     total += vs.at(i).price;
 
                     b4.number = vs.at(i).number;
@@ -351,7 +343,8 @@ void Buy()
     }
 }
 
-void Show_All(void) {        // 전체 정보 표시
+// 전체 정보 표시
+void Show_All(void) {        
     for (int i = 0; i < 5; i++)
     {
         vo.at(i).print_Outer();
@@ -376,9 +369,7 @@ void Show_All(void) {        // 전체 정보 표시
 
 void Show_Kategorie()
 {
-
     int select;
-
     cout << "1. 외투" << endl;
     cout << "2. 상의" << endl;
     cout << "3. 바지" << endl;
@@ -417,11 +408,10 @@ void Show_Kategorie()
 
     }
     Buy();
-
-
 }
 
-void Find_Name() //이름을 검색하는 코드
+//이름을 검색하는 코드
+void Find_Name()
 {
     system("cls");
     cout << "\033[1;31m" << "이름 입력 : " << "\033[0m";
@@ -448,8 +438,8 @@ void Find_Name() //이름을 검색하는 코드
             found = true;
         }
     }
-
-    if (!found) { // 검색 결과가 없을 경우 메시지 출력
+    // 검색 결과가 없을 경우 메시지 출력
+    if (!found) { 
         cout << "\033[1;31m" << "없는 상품입니다." << "\033[0m" << endl << endl;
     }
 }
@@ -464,7 +454,6 @@ void Check_Price()
 
         cout << "상품명 : " << vb.at(i).name;
         cout << ", 가격 : " << vb.at(i).price << endl << endl;
-        /*total += vb.at(i).price;*/
         i++;
     }
     cout << "총 합 : " << total << "원" << endl << endl;
@@ -474,7 +463,6 @@ void Check_Price()
 void Payment()
 {
     int pay;
-
     while (true)
     {
         if (total == 0)
@@ -542,8 +530,8 @@ void Menu()
             Find_Name();
             system("pause");
             break;
-
-        case 4://장바구니 확인하기
+        
+        case 4:
             system("cls");
             Check_Price();
             system("pause");
@@ -559,12 +547,10 @@ void Menu()
             system("pause");
             break;
 
-
         default:
             cout << "\033[1;31m" << "없는 메뉴입니다." << "\033[0m" << endl << endl;
         }
     }
-
 }
 
 
